@@ -1,3 +1,10 @@
 创建仓库：在想要进行版本管理的目录下输入git init即可完成键仓
 仓库中添加文件：版本目录下的文件需要执行 git add filename （filename替换为自己的文件名字）才能添加到仓库中
 提交文件到仓库：添加完文件后需要执行 git commit -m "descripiton" 才能真正将文件和仓库关联在一起 description是对本次才修改的描述
+查看仓库状态：git status
+对比两个文件的改动内容: git diff file1 file2 ; git diff file1 (查看单个文件的改动)
+版本回退：git reset --hard HEAD^ (回退1个以上版本时 HEAD^n n是回退多少个版本)
+撤销版本回退：git reflog查看之前的记录，找到回退的啊版本号 git reset --hard *** (***表示回退的版本号的前几位数字 )
+撤销上次修改（git add 或 git commit）命令：git checkout -- file (file 要撤销修改的文件)
+
+
