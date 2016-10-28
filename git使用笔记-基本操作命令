@@ -6,5 +6,6 @@
 版本回退：git reset --hard HEAD^ (回退1个以上版本时 HEAD^n n是回退多少个版本)
 撤销版本回退：git reflog查看之前的记录，找到回退的啊版本号 git reset --hard *** (***表示回退的版本号的前几位数字 )
 撤销上次修改（git add 或 git commit）命令：git checkout -- file (file 要撤销修改的文件)
+删除一个文件：rm file (删除工作区的文件) git rm file 删除版本库中的文件 git commit 提交修改；只删除工作区文件，想回复删除 git checkout -- file
 
 
