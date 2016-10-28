@@ -1,3 +1,8 @@
+创建远程库
 1.创建SSH key。$ ssh-keygen -t rsa -C "youremail@email.com"
 2.用户主目录下产生.ssh的隐藏文件夹，文件夹下有两个文件id_rsa和id_rsa.pub。其中id_rsa是密钥文件，id_rsa.pub是公钥文件，打开公钥文件
 3.登录github。在ssh keys页面添加公钥文件内容
+
+添加远程库
+本地创建一个git库后，github上再创建一个库，并将两个库进行远程同步，首先在github上创建一个空的库，之后关联本地库和远程库
+git remote add origin git@github.com:hustgf2004/hustgf2004.git 其中 origin 是创建的远程库的名字 
