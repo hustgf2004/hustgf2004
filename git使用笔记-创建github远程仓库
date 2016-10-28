@@ -5,6 +5,6 @@
 
 关联本地库和远程库
 本地创建一个git库后，github上再创建一个库，并将两个库进行远程同步，首先在github上创建一个空的库，之后关联本地库和远程库
-git remote add origin git@github.com:hustgf2004/hustgf2004.git 其中 origin 是创建的远程库的名字 ，
+git remote add origin git@github.com:hustgf2004/hustgf2004.git 其中 origin 是创建的远程库的默认名字 ，
 git@github.com:hustgf2004/hustgf2004.git是远程库的ssh地址
 最后一步将本地库推送到远程库 git push -u origin master  ; -u 参数可以将本地库和远程库关联起来，以后在推送本地库内容到远程库时不许要再输入-u参数了。
