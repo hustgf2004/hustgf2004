@@ -1,0 +1,34 @@
+创建分支:git checkout -b dev (dev是创建的分支名称)
+-b选项表示创建并切换，上一命令相当与如下两条命令，git branch dev ;git checkout dev
+查看分支：git branch
+合并分支:将dev分支合并到master分支上，先切换到master分支 git checkout master;在merge, git merge dev
+删除分支: git branch -d dev
+
+=========================
+解决分支冲突
+当主线master和分支dev都修改一个文件并都提交commit时，这时merge会产生冲突
+冲突必须手动解决
+
+===================
+bug分支
+当正在当前分支工作时，有版本bug需要修复，可以先把当前工作隐藏起来，待bug修复后再恢复原来分支继续工作
+隐藏当前工作分支: git stash
+在master分支新建bug修复分支，先切换到master分支
+git checkout master
+git checkout -b issue-101
+修改完毕后，再次切换到master分支并删除issue-101分支
+git checkout master
+git merge --no-ff -m "description" issue-101
+git branch -d issue-101
+再次切换到dev工作分支，继续之前的工作
+git checkout dev
+查看刚才的工作现场
+git stash list
+恢复工作现场，有两种方法
+1.git stash apply ，恢复后stash内容并不删除，需要执行 git stash drop
+2.git stash pop,恢复后删除stash内容
+
+=========
+强行删除一个分支
+当在新分支上开发完一个功能后，切换到主分支，这时不想合并分支内容到主分支，而是想删除分支，用 git branch -d dev (dev是分支名字),提示无法删除分支
+用 git branch -D dev 命令可以强行删除分支
