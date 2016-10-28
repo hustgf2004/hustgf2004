@@ -1,0 +1,22 @@
+切换到要打标签的分支
+git checkout dev
+打标签
+git tag v1.0
+如果某个提交的版本忘记打标签，找到commit id 后打上标签就可以了
+先查看要打标签的历史记录
+git log --pretty=oneline --abbrev-commit
+git tag v1.0 commitid (commitid就是要被打标签的commit id)
+还可以创建带有说明的标签
+git tag -a v1.0 -m "description" commitid
+用命令查看说明文字
+git show v1.0
+==============
+操作标签
+删除标签
+git  tag -d v1.0
+推送标签到远程
+git push origin v1.0
+一次推送全部标签到远程
+git push origin --tags
+删除远程标签
+git push origin ：refs/tags/v1.0
