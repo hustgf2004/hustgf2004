@@ -1,0 +1,3 @@
+1.创建SSH key。$ ssh-keygen -t rsa -C "youremail@email.com"
+2.用户主目录下产生.ssh的隐藏文件夹，文件夹下有两个文件id_rsa和id_rsa.pub。其中id_rsa是密钥文件，id_rsa.pub是公钥文件，打开公钥文件
+3.登录github。在ssh keys页面添加公钥文件内容
