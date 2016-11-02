@@ -1,7 +1,7 @@
 先创建本地库，再创建远程库并将两者关联的方法已经熟悉了，还有第二种方法关联本地库和远程库，当已经有远程库时，没有本地库，将远程库克隆到本地的方法：
 git clone git@github.com:hustgf2004/gitskills.git
 关联本地库与远程库
-git remote add gitskills git@github.com:hustgf2004/gitskills.git
+git remote add origin git@github.com:hustgf2004/gitskills.git
 添加本地文件
 git add filename
 提交到本地库
